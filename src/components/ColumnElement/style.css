@@ -1,0 +1,14 @@
+.Column-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: 30px;
+  max-height: 100px;
+
+}
+
+.Column-element p {
+  margin: auto;
+  font-size: 14px;
+}

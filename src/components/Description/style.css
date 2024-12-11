@@ -1,0 +1,14 @@
+.Description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+}
+
+.Brick {
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+  border-radius: 3px;
+}

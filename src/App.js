@@ -1,10 +1,14 @@
-import './App.css';
+import { useEffect, useState } from 'react';
+
 import Column from './components/Column/Column';
 import DescriptionElement from './components/Description/DescriptionElement';
 import NormElement from './components/NormElement/NormElement';
-import { useEffect, useState } from 'react';
 import Sum from './components/Sum/Sum';
+
 import dots from "./img/icons/three_dots.svg";
+
+import './styles/main.css';
+
 
 function App() {
   const [data, setData] = useState({});

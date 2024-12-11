@@ -1,0 +1,10 @@
+.Column {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Column p {
+  align-self: center;
+  font-size: 10px;
+}

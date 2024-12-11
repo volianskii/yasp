@@ -1,6 +1,9 @@
+import "./style.css"
+
 const NormElement = ({ value }) => {
   const height = `${value}px`;
   const divStyle = { height: height }
+
   return (
     <div className="Column">
       <div className='Column-element norm' style={divStyle}>

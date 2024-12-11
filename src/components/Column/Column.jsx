@@ -1,4 +1,5 @@
-import ColumnElement from "../ColumnElement";
+import ColumnElement from "../ColumnElement/ColumnElement";
+import "./style.css";
 
 const Column = ({ name, data }) => {
 
