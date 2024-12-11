@@ -4,6 +4,7 @@ import DescriptionElement from './components/Description/DescriptionElement';
 import NormElement from './components/NormElement/NormElement';
 import { useEffect, useState } from 'react';
 import Sum from './components/Sum/Sum';
+import dots from "./img/icons/three_dots.svg";
 
 function App() {
   const [data, setData] = useState({});
@@ -12,15 +13,14 @@ function App() {
 
   const getData = async () => {
     const response = await fetch(
-      "https://rcslabs.ru/ttrp4.json").then((response) => response.json());
-
+      "https://rcslabs.ru/ttrp1.json").then((response) => response.json());
     setData(response);
   }
   useEffect(() => {
     getData();
     if (data.dev !== undefined) {
-      setFirstDiff((data.dev.front + data.dev.back + data.dev.back) - (data.test.front + data.test.back + data.test.back));
-      setSecondDiff((data.test.front + data.test.back + data.test.back) - (data.prod.front + data.prod.back + data.prod.back));
+      setFirstDiff((data.test.front + data.test.back + data.test.db) - (data.dev.front + data.dev.back + data.dev.db));
+      setSecondDiff((data.prod.front + data.prod.back + data.prod.db) - (data.test.front + data.test.back + data.test.db));
     }
   }, [data])
 
@@ -28,17 +28,24 @@ function App() {
     data.dev === undefined ? <div><p>Loading</p></div> :
       <div className="App">
         <div className="App-container">
-          <p className='Header'>Количество пройденных тестов "OS Doors"</p>
-          <div className="Sum-section">
-            <Sum data={firstDiff} />
-            <Sum data={secondDiff} />
-          </div>
-          <div className="Columns-container">
-            <Column name='dev' data={data.dev} />
-            <Column name='test' data={data.test} />
-            <Column name='prod' data={data.prod} />
-            <NormElement value={data.norm} />
-          </div>
+          <header>
+            <p>Количество пройденных тестов "{data.title}"</p>
+            <img src={dots} alt='more'></img>
+          </header>
+
+          <main>
+            <div className="Sum-section">
+              <Sum data={firstDiff} />
+              <Sum data={secondDiff} />
+            </div>
+            <div className="Columns-container">
+              <Column name='dev' data={data.dev} />
+              <Column name='test' data={data.test} />
+              <Column name='prod' data={data.prod} />
+              <NormElement value={data.norm} />
+            </div>
+          </main>
+
           <footer>
             <DescriptionElement color='#4AB6E8' text='Клиентская часть' />
             <DescriptionElement color='#AA6FAC' text='Серверная часть' />
