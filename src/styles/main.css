@@ -73,20 +73,29 @@ main {
 }
 
 .Sum-section {
+  /* display: flex;
+  flex-direction: row; */
+  padding-left: 45px;
+  /* position: relative; */
+  align-self: flex-start;
+  /* justify-content: space-evenly;
+  width: 360px;
+  margin-top: 33px; */
+  position: relative;
+}
+
+.Sum-container {
   display: flex;
-  flex-direction: row;
-  margin-left: 133px;
-  margin-top: 33px;
-  align-self: start;
-  font-size: 14px;
-  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
 }
 
 footer {
   align-self: flex-start;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  column-gap: 47px;
+  column-gap: 46px;
   color: #898290;
   font-size: 10px;
   margin-top: 14px;
