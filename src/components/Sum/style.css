@@ -24,11 +24,7 @@
   margin-right: 2px;
 }
 
-.Sum-section {
-  display: flex;
-  flex-direction: row;
-  margin-left: 133px;
-  margin-top: 33px;
-  align-self: start;
-  font-size: 14px;
+.WhiteBorder {
+  border-left: 5px white solid;
+  border-right: 5px white solid;
 }

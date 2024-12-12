@@ -17,7 +17,7 @@ function App() {
 
   const getData = async () => {
     const response = await fetch(
-      "https://rcslabs.ru/ttrp1.json").then((response) => response.json());
+      "https://rcslabs.ru/ttrp2.json").then((response) => response.json());
     setData(response);
   }
   useEffect(() => {
@@ -42,6 +42,7 @@ function App() {
               <Sum data={firstDiff} />
               <Sum data={secondDiff} />
             </div>
+
             <div className="Columns-container">
               <Column name='dev' data={data.dev} />
               <Column name='test' data={data.test} />

@@ -69,6 +69,17 @@ main {
   column-gap: 60px;
   align-items: end;
   margin-top: 59px;
+  z-index: 1;
+}
+
+.Sum-section {
+  display: flex;
+  flex-direction: row;
+  margin-left: 133px;
+  margin-top: 33px;
+  align-self: start;
+  font-size: 14px;
+  z-index: 1;
 }
 
 footer {

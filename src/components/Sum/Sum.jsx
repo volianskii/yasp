@@ -13,10 +13,13 @@ const Sum = ({ data }) => {
   }
 
   return (
-    <div className="Sum" style={divStyle}>
-      {(data !== 0) ? <img src={(data > 0) ? upArrow : downArrow} alt="arrow" /> : ""}
-      <p>{data}</p>
+    <div className="WhiteBorder">
+      <div className="Sum" style={divStyle}>
+        {(data !== 0) ? <img src={(data > 0) ? upArrow : downArrow} alt="arrow" /> : ""}
+        <p>{data <= 0 ? data : `+${data}`}</p>
+      </div>
     </div>
+
   );
 }
 
